@@ -145,6 +145,16 @@ def index():
     Renders the main HTML page for the client-side audio player.
     """
     return render_template('index.html') 
+    
+@app.route('/version')
+def version():
+    """Version endpoint to confirm automated deployment"""
+    from datetime import datetime
+    return {
+        'version': '2.0',
+        'deployment_method': 'GitHub Actions + AWS SSM',
+        'timestamp': datetime.now().isoformat()
+    }
 
 @app.route('/select_directory', methods=['POST'])
 def select_directory():
