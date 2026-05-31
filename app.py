@@ -14,7 +14,7 @@ CORS(app)
 current_directory = None
 current_playlist = [] # Stores full paths on server
 audio_file_map = {}  # Maps filename to full path for nested directories
-SUPPORTED_AUDIO_EXTENSIONS = ('.mp3', '.wav', '.ogg')
+SUPPORTED_AUDIO_EXTENSIONS = ('.mp3', '.wav', '.ogg') # Supported audio file formats
 
 # Global variable to store parsed log data
 parsed_transcription_data = {}
